@@ -49,20 +49,19 @@ function pageBanner($args = NULL) {
 function university_files() {
   wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
   wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-  
-  wp_enqueue_script('googleMap', '//maps.googleapis.com/maps/api/js?key=AIzaSyDin3iGCdZ7RPomFLyb2yqFERhs55dmfTI', NULL, '1.0', true);
 
-  if (strstr($_SERVER['SERVER_NAME'], 'uniportal-theme')) {
-    wp_enqueue_script('main-university-js', 'http://localhost:3000/bundled.js', NULL, '1.0', true);
+  if (strstr($_SERVER['SERVER_NAME'], 'uniportal')) {
+    wp_enqueue_script('main-university-js', get_theme_file_uri('/js/scripts-bundled.js'), NULL, '1.0', true);
   } else {
-    wp_enqueue_script('our-vendors-js', get_theme_file_uri('/bundled-assets/vendors~scripts.c74a23278ad460aee4f9.js'), NULL, '1.0', true);
+    wp_enqueue_script('our-vendors-js', get_theme_file_uri('/bundled-assets/vendors~scripts.492818fc6d2129a1b0a3.js'), NULL, '1.0', true);
     wp_enqueue_script('main-university-js', get_theme_file_uri('/bundled-assets/scripts.e1e70759bba41235fc67.js'), NULL, '1.0', true);
     wp_enqueue_style('our-main-styles', get_theme_file_uri('/bundled-assets/styles.e1e70759bba41235fc67.css'));
   }
 
-  wp_localize_script('main-university-js', universityData, array(
+  wp_localize_script('main-university-js', 'universityData', array(
 
-    'root_url' => get_site_url()
+    'root_url' => get_site_url(),
+    'nonce' => wp_create_nonce('wp_rest')
   ));
 }
 
@@ -107,12 +106,12 @@ function university_adjust_queries($query) {
 
 add_action('pre_get_posts', 'university_adjust_queries');
 
-function universityMapKey($api) {
-  $api['key'] = 'AIzaSyBh9b1rNCp6kOi5JeMHiRP4klDymBeoEWk';
-  return $api;
-}
+// function universityMapKey($api) {
+//   $api['key'] = 'AIzaSyBh9b1rNCp6kOi5JeMHiRP4klDymBeoEWk';
+//   return $api;
+// }
 
-add_filter('acf/fields/google_map/api', 'universityMapKey');
+// add_filter('acf/fields/google_map/api', 'universityMapKey');
 
 
 add_filter('ai1wm_exclude_content_from_export', 'ignoreCertainFiles');

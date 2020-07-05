@@ -20,21 +20,14 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 
-if (strstr($_SERVER['SERVER_NAME'], 'uniportal')){
 
-define( 'DB_NAME', 'wordpress' );
-define( 'DB_USER', 'root' );
-define( 'DB_PASSWORD', '' );
-define( 'DB_HOST', 'localhost' );
-
-}else{
 
 define( 'DB_NAME', 'dbrfkyyz3zjhm5' );
 define( 'DB_USER', 'uyet58hetw9e5' );
 define( 'DB_PASSWORD', 'Sonar@1127' );
 define( 'DB_HOST', '127.0.0.1' );
 
-}
+
 
 
 /** Database Charset to use in creating database tables. */
@@ -94,3 +87,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+

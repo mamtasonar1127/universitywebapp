@@ -20,8 +20,8 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 
-define( 'DB_NAME', 'dbrfkyyz3zjhm5' );
-define( 'DB_USER', 'uyet58hetw9e5' );
+define( 'DB_NAME', 'dbrjv56cf8hzmj' );
+define( 'DB_USER', 'uhm7p5ywrxqrf' );
 define( 'DB_PASSWORD', 'Sonar@1127' );
 define( 'DB_HOST', '127.0.0.1' );
 

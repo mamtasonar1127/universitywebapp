@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
   <div class="page-banner">
-  <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/library-hero.jpg') ?>);"></div>
+  <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/university.jpg') ?>);"></div>
     <div class="page-banner__content container t-center c-white">
       <h1 class="headline headline--large">Welcome!</h1>
       <h2 class="headline headline--medium">We think you&rsquo;ll like it here.</h2>
@@ -103,7 +103,7 @@
     <div class="hero-slider__interior container">
       <div class="hero-slider__overlay">
         <h2 class="headline headline--medium t-center">Free Food</h2>
-        <p class="t-center">Fictional University offers lunch plans for those in need.</p>
+        <p class="t-center">University offers lunch plans for those in need.</p>
         <p class="t-center no-margin"><a href="#" class="btn btn--blue">Learn more</a></p>
       </div>
     </div>

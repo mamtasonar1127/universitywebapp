@@ -22,7 +22,7 @@
 
 define( 'DB_NAME', 'dbrjv56cf8hzmj' );
 define( 'DB_USER', 'uhm7p5ywrxqrf' );
-define( 'DB_PASSWORD', 'Sonar@1127' );
+define( 'DB_PASSWORD', 'Prasad@1127' );
 define( 'DB_HOST', '127.0.0.1' );
 
 

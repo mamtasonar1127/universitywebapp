@@ -20,10 +20,22 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 
-define( 'DB_NAME', 'dbrjv56cf8hzmj' );
-define( 'DB_USER', 'uhm7p5ywrxqrf' );
+if(strstr($_SERVER['SERVER_NAME'], 'uniportal')){
+define( 'DB_NAME', 'wordpress' );
+define( 'DB_USER', 'root' );
+define( 'DB_PASSWORD', '' );
+define( 'DB_HOST', 'localhost' );
+
+}else{
+
+define( 'DB_NAME', 'db27nfnpsrq9uq' );
+define( 'DB_USER', 'ua3gubcsj297y' );
 define( 'DB_PASSWORD', 'Prasad@1127' );
 define( 'DB_HOST', '127.0.0.1' );
+
+
+}
+
 
 
 
@@ -73,7 +85,7 @@ $table_prefix = 'wp_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG', true );
+define( 'WP_DEBUG', false );
 
 /* That's all, stop editing! Happy publishing. */
 

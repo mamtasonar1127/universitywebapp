@@ -20,7 +20,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 
-if(strstr($_SERVER['SERVER_NAME'], 'uniportal')){
+if('localhost/uniportal'){
 define( 'DB_NAME', 'wordpress' );
 define( 'DB_USER', 'root' );
 define( 'DB_PASSWORD', '' );
